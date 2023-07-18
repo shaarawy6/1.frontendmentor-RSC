@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+
+  <style>
+    *{
+      font-family: 'Barlow', sans-serif;    }
+
+    body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    }
+
+    .container{
+      display: grid;
+      grid-template-columns: 400px 400px;
+      grid-template-rows: 300px 300px;
+      border-radius:5%;
+      box-shadow: 10px 10px 16px #9eb5bf;
+    }
+
+    .blue{
+      background-image: linear-gradient(hsl(252, 100%, 67%) ,hsl(241, 81%, 54%));
+      grid-row: span 2;
+      border-radius:5%;
+      display: grid;
+      grid-template-rows: 0.5fr 1fr 1fr;
+    }
+
+    .blue h3{
+      color:rgba(255, 255, 255, 0.7);
+      display: grid;
+      grid-row: 1;
+      font-size: 30px;
+    }
+    .circle{
+      border-radius: 50%;
+      background-image: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+      display: grid;
+      width: 200px;
+      height: 200px;
+      grid-row: 2;
+      margin-left: 100px;
+      margin-top: 30px;
+    }
+
+    .circle > .score{
+      color:white;
+      font-size: 76px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      margin-top: 50px;
+    }
+
+    span{
+      color:rgba(255, 255, 255, 0.7);
+      font-size: 20px;
+      text-align: center;
+    }
+    
+    .words span{
+      font-size: xx-large;
+      font-weight: 900;
+      display: grid;
+      grid-row: 3;
+      color: white;
+      margin-bottom: 20px;
+    }
+    
+    .words{
+      color:rgba(255, 255, 255, 0.7);
+      display: grid;
+      grid-row: 3;
+      width:250px;
+      margin-left: 75px;
+      margin-top: 20px;
+      font-size: 20px
+    }
+
+    .white{
+      display: grid;
+      grid-template-rows: 0.2fr 1fr 0.4fr;
+      grid-row: span 2;
+    }
+
+    .summary{
+      color: black;
+      display: grid;
+      grid-row: 1;
+      font-size: 30px;
+      text-align: start;
+      margin-left: 40px;
+    }
+
+    .menu{
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      gap: 10px;
+      width: 90%;
+      margin-left: 5%;
+    }
+
+    .part{
+      background-color: whitesmoke;
+      border-radius: 5%;
+      font-size: 21px;
+    }
+    .reaction{
+      display: grid;
+      grid-row: 1;
+      color: hsl(0, 100%, 67%);
+    }
+
+    .memory{
+      display: grid;
+      grid-row: 2;
+      color: hsl(39, 100%, 56%);
+    }
+
+    .verbal{
+      display: grid;
+      grid-row: 3;
+      color: hsl(166, 100%, 37%);
+    }
+
+    .visual{
+      display: grid;
+      grid-row: 4;
+      color: hsl(234, 85%, 45%);
+    }
+
+    .part p{
+      display: flex;
+      margin-left: 0px;
+      margin-top: 30px;
+    }
+
+    img{
+      height: 25px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+
+    .reactionleft{
+      color: black;
+      margin-left: 140px;
+    }
+    
+    .memoryleft{
+      color:black;
+      margin-left: 140px;
+    }
+    
+    .verballeft{
+      color:black;
+      margin-left: 165px;
+    }
+    
+    .visualleft{
+      color:black;
+      margin-left: 163px;
+    }
+    
+    #color{
+      color:#9eb5bf
+    }
+
+    .button{
+      background-color: blue;
+      width: 90%;
+      height: 50px;
+      margin-left: 5%;
+      margin-top: 10%;
+      border-radius: 30px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    .button p{
+      color: white;
+      font-size: 25px;
+    }
+
+    @media (max-width:375px){
+      .button{
+      background-color: black;
+      font-size: 25px;
+      margin-bottom: 50px;
+      }
+
+      .container{
+      display: grid;
+      grid-template-columns: 375px 375px;
+      grid-template-rows: 250px 250px;
+      }
+
+      .blue{
+      grid-column: span 2;
+      border-radius:5%;
+      display: grid;
+      grid-template-rows: 0.5fr 1fr 1fr;/*mt3dl4*/
+    }
+
+    .circle{
+      display: grid;
+      grid-row: 2;
+      margin-left: 280px;
+      margin-top: 30px;
+    }
+
+    .words{
+      width:300px;
+      margin-left: 230px;
+      margin-top: 20px;
+      font-size: 20px
+    }
+
+    .white{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 710px;
+    }
+
+    .reactionleft{
+      color: black;
+      margin-left: 400px;
+    }
+    
+    .memoryleft{
+      color:black;
+      margin-left: 400px;
+    }
+    
+    .verballeft{
+      color:black;
+      margin-left: 420px;
+    }
+    
+    .visualleft{
+      color:black;
+      margin-left: 420px;
+    }
+    
+  }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class = "container">
+      <div class = "blue">
+        <h3>Your Result</h3>
+        <div class = "circle">
+          <p class = "score">76<br><span>of 100</span></p>
+        </div>
+        <div class = "words">
+          <p><span>Great</span>You scored higher than 65% of the people who have taken these tests.</p>
+        </div>
+      </div>
+
+      <div class = "white">
+        <h3 class = "summary">Summary</h3>
+        <div class = "menu">
+          <div class = "reaction part">
+            <p><img src = "./assets/images/icon-reaction.svg" alt="reaction">Reaction <span class = reactionleft>80 / <span id = "color">100</span></span></p>
+          </div>
+          <div class = "memory part">
+            <p><img src = "assets/images/icon-memory.svg" alt="reaction">Memory <span class = memoryleft>92 / <span id = "color">100</span></span></p>
+          </div>
+          <div class = "verbal part">
+            <p><img src = "assets/images/icon-verbal.svg" alt="reaction">verbal <span class = verballeft>61 / <span id = "color">100</span></span></p>
+          </div>
+          <div class = "visual part">
+            <p><img src = "assets/images/icon-visual.svg" alt="reaction">Visual <span class = visualleft>72 / <span id = "color">100</span></span></p>
+          </div>
+        </div>
+
+        <div class = "button">
+          <p>continue</p>
+        </div>
+  
+      </div>
+
+  </div>
+</body>
+</html>
